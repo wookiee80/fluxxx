@@ -103,7 +103,7 @@ class UserManager
         }
         
     }
-    
+        //Méthode pour récupérer un utilisateur dans la base
         public function get($champ,$valeur)
     {
 
