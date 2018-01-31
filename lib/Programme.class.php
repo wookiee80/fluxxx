@@ -7,7 +7,9 @@ class Programme
     protected $_idUser;
     protected $_nombreMedia;
     
-        /**************************************/
+    
+    
+    /**************************************/
 
 //constructeur:
     
@@ -43,63 +45,68 @@ class Programme
     }
     
     
-    /******************************
-     *           Accesseurs       *
-     ******************************/
+    /*****************************
+     *  Accesseurs de la classe  *
+     *****************************/
     
-  public function idProgramme(){         return $this->_idProgramme;}
-  public function titreProgramme(){      return $this->_titreProgramme;}
+  public function idProgramme(){      return $this->_idProgramme;}
+  public function titreProgramme(){    return $this->_titreProgramme;}
   public function idUser(){    return $this->_idUser;}
   public function nombreMedia(){    return $this->_nombreMedia;}
   
   
-      /******************************
-     *           Accesseurs       *
-     *******************************/
   
-  public function setIdProgramme($idProgramme)
-  {
-      if(is_int($idProgramme))
-      {
-          $this->_idProgramme = $idProgramme;
-      }
- else {
-          throw new Exception('Violation de droit : ID du programme ne convient pas !');
-      }
-  }
+  /*******************************
+   *   Mutateurs de la classe    *
+   *******************************/
   
-  public function setTitreProgramme($titreProgramme)
-  {
-      if(strlen($titreProgramme) <= 20)
-      {
-          $this->_titreProgramme = $titreProgramme;
-      }
- else {
-          throw new Exception('Le titre du programme ne doit pas dépasser 20 caractères');
-      }
-  }
+public function setIdProgramme($idProgramme)
+{
+    if(is_int($idProgramme))
+    {
+        $this->_idProgramme = $idProgramme;
+    }
+    else 
+    {
+        throw new Exception('Alerte de violation : Erreur sur l\'ID du programme.');
+    }
+}
+
+public function setTitreProgramme($titreProgramme)
+{
+    if(strlen($titreProgramme) <= 20)
+    {
+        $this->_titreProgramme = $titreProgramme;
+    }
+    else
+    {
+        throw new Exception('Le titre du programme ne doit pas excèder 20 caractères.');
+    }
+}
+
+public function setIdUser($idUser)
+{
+    if(is_int($idUser))
+    {
+        $this->_idUser = $idUser;
+    }
+    else 
+    {
+        throw new Exception('Alerte de violation : Erreur sur l\'ID du propriiétaire.');
+    }
+}
+
+public function setNombreMedia($nombreMedia)
+{
+    if(is_int($nombreMedia))
+    {
+        $this->_nombreMedia = $nombreMedia;
+    }
+    else
+    {
+        throw new Exception('Erreur : Le nombre de média doit être de type numérique.');
+    }
+}
   
-  public function setIdUser($iduser)
-  {
-      if(is_int($iduser))
-      {
-          $this->_idUser = $iduser;
-      }
- else {
-          throw new Exception('Violation de droit : ID de l\'utilisateur ne convient pas !' );
-      }
-  }
-  
-  public function setNombreMedia($nombreMedia)
-  {
-      if(is_int($nombreMedia))
-      {
-          $this->_nombreMedia = $nombreMedia;
-      }
-      else
-      {
-          throw new Exception('Erreur de type : Champ INT attendu !');
-      }
-  }
 }
 
