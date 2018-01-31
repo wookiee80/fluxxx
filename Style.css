@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'determinationsansweb';
+    src: url('Ressources/determinationsansweb-webfont.ttf') format('truetype');
+}
+
+body
+{
+    background-color: #9F1EE1;
+    font-family: 'determinationsansweb', Comic Sans ms, Arial;
+}
+
+.banniere
+{
+    background-color: #450168;
+    box-shadow: 0px 4px 11px #1D036C;
+    background-position: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 10px;
+    height: 35px;
+}
+
+.banniere p
+{
+    margin: 0px;
+    font-size: 36px;
+    text-align: center;
+}
+
+p
+{
+    color: #FCFF00;
+    text-shadow: 2px 2px 5px #4F5000;
+}
+
+.liste p /* Paragraphe dans la liste */
+{
+    margin: 10px 10px 0px 10px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.conn, .insc /* Liste des programmes, formulaire de connexion et d'inscription */
+{
+    height: auto;
+    width: auto;
+    margin: 90px 20px 45px 20px;
+    border-radius: 5px;
+    background-color: #610292;
+    box-shadow: 5px 4px 11px #1D036C;
+}
+
+.liste
+{
+    height: auto;
+    width: auto;
+    margin: 90px 10px 45px 10px;
+    border-radius: 5px;
+    background-color: #610292;
+    box-shadow: 5px 4px 11px #1D036C;
+}	
+
+.logo /* Logo du site */
+{
+    height: 38px;
+    width: 38px;
+    float: left;
+}
+
+.creation /* Zone de création (vide) */
+{
+    height: 20em;
+    width: auto;
+    margin: 45px 20px 45px 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #610292;
+    box-shadow: 5px 4px 11px #240036;
+}
+
+.user /* Logo utilisateur */
+{
+    height: 38px;
+    width: 38px;
+    float: right;
+}
+
+.menu /* Menu utilisteur (droite) */
+{
+    background-color: #450168;
+    width: 175px;
+    position: fixed;
+    border-radius: 0px 0px 0px 5px;
+    right: 0px;
+    top: 55px;
+    box-shadow: -5px 4px 11px #1D036C;
+}
+
+.connexion /* Bouton connexion */
+{
+    font-size: 27px;
+    border-top: 1px #240036 solid;
+    border-bottom: 1px #240036 solid;
+    text-align: center;
+    border-radius: 0px 0px 0px 5px;
+}
+
+.connexion:hover /* Souris au dessus du bouton connexion */
+{
+    background-color: #240036;
+}
+
+.inscription /* Bouton inscription */
+{
+    font-size: 27px;
+    border-top: 2px #240036 solid;
+    border-bottom: 1px #240036 solid;
+    text-align: center;
+}
+
+.inscription:hover /* Souris au dessus du bouton inscription */
+{
+    background-color: #240036;
+}
+
+.conn, .insc /* Formulaire de connexion et d'inscription */
+{
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.validation /* Validation de l'inscription */
+{
+    height: auto;
+    width: auto;
+    margin: 90px 20px 45px 20px;
+    border-radius: 5px;
+    background-color: #610292;
+    box-shadow: 5px 4px 11px #1D036C;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.validationconn /* Validation de la connexion */
+{
+    height: auto;
+    width: auto;
+    margin: 90px 20px 45px 20px;
+    border-radius: 5px;
+    background-color: #610292;
+    box-shadow: 5px 4px 11px #1D036C;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#listeprog
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.programme
+{
+    padding: 10px 10px 20px 27px;
+    height: 7em;
+    width: 14em;
+}
+
+.video
+{
+    padding: 20px 20px 20px 20px;
+    height: auto;
+    width: 800px;
+    margin: 90px 20px 45px 200px;
+    border-radius: 5px;
+    background-color: #610292;
+    box-shadow: 5px 4px 11px #1D036C;
+}
+
+.pied
+{
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin: 45px 20px 45px 20px;
+    border-radius: 5px;
+    background-color: #610292;
+    box-shadow: 5px 4px 11px #1D036C;
+}
+
+.creer
+{
+    padding: 20px 20px 20px 20px;
+    height: 100px;
+    width: auto;
+    margin: 90px 20px 45px 20px;
+    border-radius: 5px;
+    background-color: #610292;
+    box-shadow: 5px 4px 11px #1D036C;
+}
+
+.creation
+{
+    box-shadow: 5px 4px 11px #1D036C;
+}
