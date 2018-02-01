@@ -26,6 +26,7 @@
 		<div class="creation">
 			<a href="Creer.php"><p>Nouveau +</p></a>
 		</div>
+            bonjour
 	</body>
 	<footer>
 		<?php include("Pied.php"); ?>
