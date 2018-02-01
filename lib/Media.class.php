@@ -77,6 +77,8 @@ public function setIdMedia($idMedia)
 
 public function setType($type)
 {
+    //TODO
+    // Gérer le traitement des type de fichiers envoyés pour le média
     $this->_type = $type;
 }
 
@@ -84,5 +86,7 @@ public function setContenu($contenu)
 {
     $this->_contenu = $contenu;
 }
+
+
 }
 
