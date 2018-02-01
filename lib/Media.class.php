@@ -77,8 +77,22 @@ public function setIdMedia($idMedia)
 
 public function setType($type)
 {
-    //TODO
     // Gérer le traitement des type de fichiers envoyés pour le média
+    switch ($type)
+    {
+    case 'image'://dans le cas d'une image
+        $image = new SplFileInfo(strtolower($type));//On va lire l'extension du fichier qu'on reçoit en la passant en minuscule
+        
+        //Si on trouve bien les extensions d'un image
+        if($image == 'jpg' || $image == 'gif' || $image == 'png' || $image == 'bmp')
+        {
+            //On continue notre traitement:
+        }
+        //Sinon on affiche une erreur:
+        else {
+                throw new Exception('Fichier non supporté en tant qu\'image');
+             }
+    }
     $this->_type = $type;
 }
 

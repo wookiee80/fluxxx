@@ -25,20 +25,3 @@ $pdo->prepare($requeteCreaTabUser)->execute();
 unset ($pdo);
 
 
-
-$utilisateur = new User();
-
-$utilisateur->setNom('$_POST[\'nom\']');
-$utilisateur->setPrenom('$_POST[\'prenom\']');
-$utilisateur->setEmail('$_POST[\'mail\']');
-$utilisateur->setMotDePasse('$_POST[\'mdp\']');
-$utilisateur->setDroits('util');
-
-$db = connecBDD();
-
-
-$userManager = new UserManager($db);
-var_dump($utilisateur);
-echo '<br/>';
-
-$userManager->ajoutUser($utilisateur);

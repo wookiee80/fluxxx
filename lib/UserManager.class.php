@@ -109,8 +109,16 @@ class UserManager
 
         $q = $this->_db->query('SELECT * FROM '.USERTABLE.' WHERE '.$champ.' = "'.$valeur.'"');
         $donnees = $q->fetch(PDO::FETCH_ASSOC);
+        echo gettype($donnees['idUser']);
+        $user = new User();
+        $user->setIdUser(intval($donnees['idUser']));
+        $user->setPrenom($donnees['prenom']);
+        $user->setNom($donnees['nom']);
+        $user->setEmail($donnees['email']);
+        $user->setDroits($donnees['droits']);
         
-        return new User($donnees);
+        
+        return $user;
     }
 }
 
