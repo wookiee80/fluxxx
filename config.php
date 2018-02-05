@@ -8,6 +8,7 @@ define('PASS', '');
 
 //Tables :
 define('USERTABLE', 'user');
+define('MEDIATABLE','media');
 
 //Chemin repertoires:
 $cheminAppli = __DIR__;
