@@ -25,11 +25,18 @@ $pdo->prepare($requeteCreaTabUser)->execute();
 
 
 //Requète pour créer la table media:
-$requeteMedia = 'CREATE TABLE IF NOT EXISTS `fluxxx`.`media` ( `idMedia` INT NOT NULL AUTO_INCREMENT , `type` VARCHAR(30) NOT NULL , `contenu` VARCHAR(400) NOT NULL , PRIMARY KEY (`idMedia`)) ENGINE = MyISAM';
+$requeteMedia = 'CREATE TABLE IF NOT EXISTS `fluxxx`.`media` ( `idMedia` INT NOT NULL AUTO_INCREMENT , `type` VARCHAR(30) NOT NULL , `contenu` VARCHAR(400) NOT NULL , PRIMARY KEY (`idMedia`)) ENGINE = InnoDB';
 
 
 //On prepare et execute la requète:
 $pdo->prepare($requeteMedia)->execute();
+
+
+//Requète pour créer la table programme:
+$requeteProgramme = 'CREATE TABLE IF NOT EXISTS `fluxxx`.`programme` ( `idProgramme` INT NOT NULL AUTO_INCREMENT , `titreProgramme` VARCHAR(30) NOT NULL , `idUser` INT NOT NULL , `nombreMedia` INT NOT NULL , PRIMARY KEY (`idProgramme`)) ENGINE = InnoDB';
+
+//On prepare et execute la requète:
+$pdo->prepare($requeteProgramme)->execute();
 
 //On coupe la connexion
 unset ($pdo);
