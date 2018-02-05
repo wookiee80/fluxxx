@@ -22,6 +22,16 @@ $requeteCreaTabUser = "CREATE TABLE IF NOT EXISTS `fluxxx`.`".USERTABLE."` ( `id
 // on prépare et on exécute la requête
 $pdo->prepare($requeteCreaTabUser)->execute();
 
+
+
+//Requète pour créer la table media:
+$requeteMedia = 'CREATE TABLE IF NOT EXISTS `fluxxx`.`media` ( `idMedia` INT NOT NULL AUTO_INCREMENT , `type` VARCHAR(30) NOT NULL , `contenu` VARCHAR(400) NOT NULL , PRIMARY KEY (`idMedia`)) ENGINE = MyISAM';
+
+
+//On prepare et execute la requète:
+$pdo->prepare($requeteMedia)->execute();
+
+//On coupe la connexion
 unset ($pdo);
 
 

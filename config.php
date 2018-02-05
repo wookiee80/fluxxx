@@ -11,6 +11,7 @@ define('USERTABLE', 'user');
 
 //Chemin repertoires:
 $cheminAppli = __DIR__;
+define('CHEMIN_APPLI', __DIR__);
 
 //Email du webmaster:
 define('MAILWEBMASTER', 'exemple@mail.com');
