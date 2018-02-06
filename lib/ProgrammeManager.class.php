@@ -58,5 +58,22 @@ class ProgrammeManager
         //Execute une requete de type delete
         $this->_db->exec('DELETE FROM '.PROGRAMMETABLE.'WHERE id = '.$programme->idUser());
     }
+    
+    
+     //Méthode pour récupérer un programme dans la table :
+    public function getProgramme($champ, $valeur)
+    {
+        $q = $this->_db->query('SELECT * FROM '.PROGRAMMETABLE.' WHERE '.$champ.' = "'.$valeur.'"');
+        $donnees = $q->fetch(PDO::FETCH_ASSOC);
+        
+        $programme = new Programme;
+        
+        $programme->setIdProgramme(intval($donnees['idProgramme']));
+        $programme->setIdUser($donnees['idUser']);
+        $programme->setTitreProgramme($donnees['titreProgramme']);
+        $programme->setNombreMedia($donnees['nombreMedia']);
+        
+        return $programme;
+    }
 }
 
