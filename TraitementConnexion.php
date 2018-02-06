@@ -14,7 +14,10 @@
         if (($util->verifConnexion($mail, $mdp) == 1)) //Si verifConnexion est à 1, connecter et renvoyer à la page d'accueil
         {
             echo 'Vous etes connecte';
+            $_SESSION['idUser'] = '1';
+            $_SESSION['nom'] = 'Dupont';
             $_SESSION['prenom'] = 'Jean';
+            $_SESSION['email'] = 'JeanDupont@gmail.com';
             header('Location: accueil.php');
             exit();
         }

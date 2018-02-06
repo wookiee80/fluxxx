@@ -8,15 +8,20 @@
 	<div class="menu">
 		<nav>
 			<a href="Inscription.php">
-			<div class="inscription">
+                            <div class="inscription">
 				<p>Inscription</p>
-			</div>
+                            </div>
 			</a>
 			<a href="Connexion.php">
-			<div class="connexion">
+                            <div class="connexion">
 				<p>Connexion</p>
-			</div>
+                            </div>
 			</a>
+                        <a href="Deconnexion.php">
+                            <div class="deconnexion">
+                                <p>Deconnexion</p>
+                            </div>
+                        </a>
 		</nav>
 	</div>
 </html>

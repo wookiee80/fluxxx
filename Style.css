@@ -98,7 +98,7 @@ p
     box-shadow: -5px 4px 11px #1D036C;
 }
 
-.connexion /* Bouton connexion */
+.connexion, .deconnexion /* Bouton connexion */
 {
     font-size: 27px;
     border-top: 1px #240036 solid;
@@ -107,7 +107,7 @@ p
     border-radius: 0px 0px 0px 5px;
 }
 
-.connexion:hover /* Souris au dessus du bouton connexion */
+.connexion:hover, .deconnexion:hover /* Souris au dessus du bouton connexion */
 {
     background-color: #240036;
 }
