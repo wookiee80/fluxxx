@@ -21,12 +21,9 @@
                             <div class="programme"><img src="Ressources/Programme6.jpg" class="prg6" alt="prg6" title="Programme6" /></div>
                             <div class="programme"><img src="Ressources/Programme7.jpg" class="prg7" alt="prg7" title="Programme7" /></div>
                             <div class="programme"><img src="Ressources/Programme8.jpg" class="prg8" alt="prg8" title="Programme8" /></div>
+                            <a href="Creer.php"><div class="programme"><img src="Ressources/plus.png" class="prg9" alt="prg9" title="Nouveau"/></div></a>
 			</div>
 		</div>
-		<div class="creation">
-			<a href="Creer.php"><p>Nouveau +</p></a>
-		</div>
-            bonjour
 	</body>
 	<footer>
 		<?php include("Pied.php"); ?>

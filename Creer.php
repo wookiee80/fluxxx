@@ -8,9 +8,26 @@
 	<body>
 		<?php include("Banniere.php"); ?>
 		<div class="creer">
+                    <form action="TraitementCreation.php" method="post">
 			<p>
-				<input type="file" name="ficher" />
+                            <input type="file" name="ficher" />
 			</p>
+                        <p>
+                            <select name="type">
+                                <option value="NULL"></option>
+                                <option value="image">Image</option>
+                                <option value="musique">Musique</option>
+                                <option value="video">Vidéo</option>
+                                <option value="document">Document</option>
+                            </select>
+                        </p>
+			<p>
+                            <input type="submit" name="envoyer" id="envoyer" />
+			</p>
+			<p>
+                            <input type="reset" name="effacer" id="effacer" />
+			</p>
+                    </form>
 		</div>
 	</body>
 	<footer>
