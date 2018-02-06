@@ -10,6 +10,7 @@ define('PASS', '');
 define('USERTABLE', 'user');
 define('MEDIATABLE','media');
 define('PROGRAMMETABLE', 'programme');
+define('COMPOTABLE','compositionProgramme');
 
 //Chemin repertoires:
 $cheminAppli = __DIR__;

@@ -38,6 +38,13 @@ $requeteProgramme = 'CREATE TABLE IF NOT EXISTS `fluxxx`.`programme` ( `idProgra
 //On prepare et execute la requète:
 $pdo->prepare($requeteProgramme)->execute();
 
+
+//Requète pour la creation de la table compositionProgramme :
+$requeteCompoProgramme = 'CREATE TABLE IF NOT EXISTS `fluxxx`.`compositionProgramme` ( `idProgramme` INT NOT NULL , `idMedia` INT NOT NULL , `ordreMedia` INT NOT NULL COMMENT "position du media dans le programme, chiffre (int)" , `dureeMedia` INT NULL COMMENT "duree d\'affichage du media (en seconde)" ) ENGINE = InnoDB COMMENT = "table de liaison en la table media et programme"';
+
+//On prepare et execute la requète:
+$pdo->prepare($requeteCompoProgramme)->execute();
+
 //On coupe la connexion
 unset ($pdo);
 
