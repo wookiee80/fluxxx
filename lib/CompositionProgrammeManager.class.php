@@ -57,5 +57,24 @@ class CompositionProgrammeManager
         //Execute une requete de type delete
         $this->_db->exec('DELETE FROM '.COMPOTABLE.' WHERE idMedia = "'.$compo->idMedia().'" AND idProgramme = "'.$compo->idProgramme().'"');
     }
+    
+     //Méthode pour récupérer une compo de programme :
+    public function getCompo($champ, $valeur)
+    {
+        $q = $this->_db->query('SELECT * FROM '.COMPOTABLE.' WHERE '.$champ.' = "'.$valeur.'"');
+        $donnees = $q->fetch(PDO::FETCH_ASSOC);
+        
+        $compo = new CompositionProgramme();
+        
+        $compo->setIdMedia(intval($donnees['idMedia']));
+        $compo->setIdProgramme($donnees['idProgramme']);
+        $compo->setOrdreMedia($donnees['ordreMedia']);
+        $compo->setDureeMedia($donnees['dureeMedia']);
+        
+        return $compo;
+    }
+    
+    //TODO :
+    //Méthode pour récupérer la totalité des compo d'un programme
 }
 

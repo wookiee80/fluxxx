@@ -21,18 +21,18 @@ function connecBDD()
 
 
 //Fonction pour vérifier le type de fichier envoyé:
-function typeFichier($type)
+function typeFichier($type,$fichier)
 {
     switch ($type)
     {
     case 'image'://dans le cas d'une image
-        $typeImage = new SplFileInfo(strtolower($type));//On va lire l'extension du fichier qu'on reçoit en la passant en minuscule
+        $typeImage = new SplFileInfo(strtolower($fichier));//On va lire l'extension du fichier qu'on reçoit en la passant en minuscule
         
         //Si on trouve bien les extensions d'un image
         if($typeImage == 'jpg' || $typeImage == 'gif' || $typeImage == 'png' || $typeImage == 'bmp')
         {
             //On continue notre traitement:
-                $typeFichier = 'image';
+            return $typeFichier = 'image';
                  break;
         }
         //Sinon on affiche une erreur:
@@ -42,9 +42,9 @@ function typeFichier($type)
              }
              
          case 'lien'://Dans le cas d'un lien URL
-            if (filter_var($type,FILTER_VALIDATE_URL))
+            if (filter_var($fichier,FILTER_VALIDATE_URL))
             {
-                $typeFichier = 'lien';
+                return $typeFichier = 'lien';
                 break;
             }
             else
