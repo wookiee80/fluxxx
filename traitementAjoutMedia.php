@@ -3,13 +3,21 @@ include 'fonctions.php';
 //TODO :
 //Traitement et enregisrement d'un media + enregistrement de la compo du programme.
 //Penser à mettre à jour la table programme (champ nombreMedia)
-if(!empty($_POST['type']) && !empty($_POST['idProgramme']) && !empty($_POST['fichier']) && !empty($_POST['idUser']))
+if(!empty($_POST['type']) && !empty($_POST['idProgramme']) && !empty($_POST['fichier']) && !empty($_POST['idUser']) && !empty($_POST['ordreMedia']))
 {
     //On récupère tous nos entrées de formulaire dans une variable:
     $idUser = $_POST['idUser'];
     $idProgramme = $_POST['idProgramme'];
     $typeMedia = $_POST['type'];
     $fichier = $_POST['fichier'];
+    if(is_int($_POST['ordreMedia']))
+    {
+        $ordreMedia = $_POST['ordreMedia'];
+    }
+ else {
+        throw new Exception('Ordre d\'apparition du média doit être exprimé en chiffre');
+    }
+    
     
     //Assignation d'una variable pour la connexion à la BDD:
     $db = connecBDD();
@@ -39,5 +47,8 @@ if(!empty($_POST['type']) && !empty($_POST['idProgramme']) && !empty($_POST['fic
             $media->setContenu($fichier);
             break;
     }
+    
+    //Ensuite la même chose pour compositionProgramme :
+    $compoProg->setOrdreMedia($ordreMedia);
     
 }

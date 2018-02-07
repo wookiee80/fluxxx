@@ -29,6 +29,9 @@ if(!empty($_POST['idProgramme']) && !empty($_POST['idUser']))
                                 <option value="document">Document</option>
                             </select>
                         </p>
+                        <p>
+                            <input type = "text" name = "ordreMedia" id = "ordreMedia"/>
+                        </p>
 			<p>
                             <input type="hidden" id="idProgramme" value ="'.$programme->idProgramme().'"/>
                             <input type = "hidden" id = "idUser" value = "'.$programme->idUser().'"/>
