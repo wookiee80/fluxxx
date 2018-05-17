@@ -18,8 +18,8 @@ if(!empty($_POST['idProgramme']) && !empty($_POST['idUser']))
   {
       $formAjoutMedia = '<form method = "POST" action = "traitementAjoutMedia.php"'
               . '<p>
-                            <input type="file" name="ficher" id="fichier" />
-			</p>
+                            <input type="file" name="ficher" id="fichier"/>
+                </p>
                         <p>
                             <select name="type">
                                 <option value="NULL"></option>

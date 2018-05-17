@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="Style.css" />
-		<title>Programme2 - Fluxxx</title>
+		<title>Programme 2 - Meflow</title>
 	</head>
 	<body>
 		<?php include("Banniere.php"); ?>
 		<div class="video">
-                    <video src="Ressources/sans.mp4" controls width="800"></video>
+                    <video src="" controls width="800"></video>
 		</div>
 	</body>
 	<footer>

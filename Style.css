@@ -1,18 +1,18 @@
 @font-face {
-    font-family: 'determinationsansweb';
-    src: url('Ressources/determinationsansweb-webfont.ttf') format('truetype');
+    font-family: 'Font';
+    src: url('Ressources/LemonMilklight.otf') format('truetype');
 }
 
 body
 {
-    background-color: #9F1EE1;
-    font-family: 'determinationsansweb', Comic Sans ms, Arial;
+    background-color: #312D22;
+    font-family: 'Font', Arial, Calibri;
 }
 
 .banniere
 {
-    background-color: #450168;
-    box-shadow: 0px 4px 11px #1D036C;
+    background-color: #3D3C37;
+    box-shadow: 0px 4px 11px #393831;
     background-position: center;
     position: fixed;
     top: 0px;
@@ -31,15 +31,14 @@ body
 
 p
 {
-    color: #FCFF00;
-    text-shadow: 2px 2px 5px #4F5000;
+    color: #E7E6E2;
+    text-shadow: 2px 2px 5px #646257;
 }
 
 .liste p /* Paragraphe dans la liste */
 {
-    margin: 10px 10px 0px 10px;
+    margin: 10px 18px 0px 18px;
     font-size: 20px;
-    text-decoration: underline;
 }
 
 .conn, .insc /* Liste des programmes, formulaire de connexion et d'inscription */
@@ -48,8 +47,8 @@ p
     width: auto;
     margin: 90px 20px 45px 20px;
     border-radius: 5px;
-    background-color: #610292;
-    box-shadow: 5px 4px 11px #1D036C;
+    background-color: #3D3C37;
+    box-shadow: 5px 4px 11px #393831;
 }
 
 .liste
@@ -58,8 +57,8 @@ p
     width: auto;
     margin: 90px 10px 45px 10px;
     border-radius: 5px;
-    background-color: #610292;
-    box-shadow: 5px 4px 11px #1D036C;
+    background-color: #3D3C37;
+    box-shadow: 5px 4px 11px #393831;
 }	
 
 .logo /* Logo du site */
@@ -76,8 +75,8 @@ p
     margin: 45px 20px 45px 20px;
     padding: 5px;
     border-radius: 5px;
-    background-color: #610292;
-    box-shadow: 5px 4px 11px #240036;
+    background-color: #3D3C37;
+    box-shadow: 5px 4px 11px #393831;
 }
 
 .user /* Logo utilisateur */
@@ -89,40 +88,43 @@ p
 
 .menu /* Menu utilisteur (droite) */
 {
-    background-color: #450168;
-    width: 175px;
+    background-color: #3D3C37;
+    width: 185px;
     position: fixed;
-    border-radius: 0px 0px 0px 5px;
+    border-radius: 0px 0px 0px 6px;
     right: 0px;
     top: 55px;
-    box-shadow: -5px 4px 11px #1D036C;
+    box-shadow: -5px 4px 11px #393831;
 }
 
-.connexion, .deconnexion /* Bouton connexion */
+.deconnexion /* Bouton deconnexion */
 {
     font-size: 27px;
-    border-top: 1px #240036 solid;
-    border-bottom: 1px #240036 solid;
+    border-top: 1px #302D22 solid;
+    border-bottom: 1px #302D22 solid;
     text-align: center;
-    border-radius: 0px 0px 0px 5px;
+    border-radius: 0px 0px 0px 6px;
 }
 
-.connexion:hover, .deconnexion:hover /* Souris au dessus du bouton connexion */
+.connexion /* Bouton connexion */
 {
-    background-color: #240036;
+    font-size: 27px;
+    border-top: 1px #302D22 solid;
+    border-bottom: 1px #302D22 solid;
+    text-align: center;
+}
+
+.connexion:hover, .deconnexion:hover, .inscription:hover /* Souris au dessus du bouton connexion, deconnexion et inscripton */
+{
+    background-color: #302D22;
 }
 
 .inscription /* Bouton inscription */
 {
     font-size: 27px;
-    border-top: 2px #240036 solid;
-    border-bottom: 1px #240036 solid;
+    border-top: 2px #302D22 solid;
+    border-bottom: 1px #302D22 solid;
     text-align: center;
-}
-
-.inscription:hover /* Souris au dessus du bouton inscription */
-{
-    background-color: #240036;
 }
 
 .conn, .insc /* Formulaire de connexion et d'inscription */
@@ -138,8 +140,8 @@ p
     width: auto;
     margin: 90px 20px 45px 20px;
     border-radius: 5px;
-    background-color: #610292;
-    box-shadow: 5px 4px 11px #1D036C;
+    background-color: #3D3C37;
+    box-shadow: 5px 4px 11px #393831;
     padding: 10px;
     font-size: 20px;
 }
@@ -150,8 +152,8 @@ p
     width: auto;
     margin: 90px 20px 45px 20px;
     border-radius: 5px;
-    background-color: #610292;
-    box-shadow: 5px 4px 11px #1D036C;
+    background-color: #3D3C37;
+    box-shadow: 5px 4px 11px #393831;
     padding: 10px;
     font-size: 20px;
 }
@@ -165,9 +167,14 @@ p
 
 .programme
 {
-    padding: 10px 10px 20px 27px;
+    padding: 10px 19px 20px 18px;
     height: 7em;
     width: 14em;
+}
+
+.nouveau
+{
+    padding: 45px 113px 45px 98px;
 }
 
 .video
@@ -177,8 +184,8 @@ p
     width: 800px;
     margin: 90px 20px 45px 200px;
     border-radius: 5px;
-    background-color: #610292;
-    box-shadow: 5px 4px 11px #1D036C;
+    background-color: #3D3C37;
+    box-shadow: 5px 4px 11px #393831;
 }
 
 .pied
@@ -186,27 +193,31 @@ p
     text-align: center;
     height: auto;
     width: auto;
-    margin: 45px 20px 45px 20px;
+    margin: 35px 20px 35px 20px;
     border-radius: 5px;
-    background-color: #610292;
-    box-shadow: 5px 4px 11px #1D036C;
+    background-color: #3D3C37;
+    box-shadow: 5px 4px 11px #393831;
 }
 
-.creer
+.creerProgramme
 {
     padding: 20px 20px 20px 20px;
     height: auto;
     width: auto;
     margin: 90px 20px 45px 20px;
     border-radius: 5px;
-    background-color: #610292;
-    box-shadow: 5px 4px 11px #1D036C;
+    background-color: #3D3C37;
+    box-shadow: 5px 4px 11px #393831;
+    text-align: center;
 }
 
-.prg9
+.nouv
 {
     height: 50px;
     width: 50px;
-    padding-top: 30px;
-    padding-left: 75px;
+}
+
+.prg
+{
+    border-radius: 1.5px 1.5px 1.5px 1.5px;
 }

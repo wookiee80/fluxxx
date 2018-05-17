@@ -11,13 +11,16 @@
         $db = connecBDD();
       
         $util = new UserManager($db);
-        if (($util->verifConnexion($mail, $mdp) == 1)) //Si verifConnexion est à 1, connecter et renvoyer à la page d'accueil
+        if (($util->verifConnexion($mail, $mdp) == TRUE)) //Si verifConnexion est à 1, connecter et renvoyer à la page d'accueil
         {
+            $utilisateur =new User();
+            $utilisateur =$util->get('email', $mail);
+            
             echo 'Vous etes connecte';
-            $_SESSION['idUser'] = '1';
-            $_SESSION['nom'] = 'Dupont';
-            $_SESSION['prenom'] = 'Jean';
-            $_SESSION['email'] = 'JeanDupont@gmail.com';
+            $_SESSION['idUser'] = $utilisateur->idUser();
+            $_SESSION['nom'] = $utilisateur->nom();
+            $_SESSION['prenom'] = $utilisateur->prenom();
+            $_SESSION['email'] = $utilisateur->email();
             header('Location: accueil.php');
             exit();
         }
