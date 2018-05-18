@@ -75,5 +75,21 @@ class ProgrammeManager
         
         return $programme;
     }
+    
+    //Méthode pour récupérer une liste de programme:
+    public function getListeProgramme($champ,$valeur)
+    {
+        //On créé un tableau vide de programmes:
+        
+       $programmes = array();
+       
+       $q = $this->_db->query('SELECT * FROM '.PROGRAMMETABLE.' WHERE '.$champ.' = "'.$valeur.'"');
+       while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+       {
+           $programmes[] = new Programme($donnees);
+       }
+       
+       return $programmes;
+    }
 }
 
