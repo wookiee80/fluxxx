@@ -13,8 +13,18 @@
 		<div class="liste">
 			<p>Programmes :</p>
 			<div id="listeprog">
-                            <?php include("liste.php"); ?>
-                            <div class="nouveau"><a href="CreerProgramme.php"><img src="Ressources/plus.png" class="nouv" alt="nouv" title="Nouveau"/></a></div>
+                            <?php
+                                if (!empty($_SESSION['idUser']))
+                                {
+                            ?>
+                                    <div class="nouveau"><a href="CreerProgramme.php"><img src="Ressources/plus.png" class="nouv" alt="nouv" title="Nouveau"/></a></div>
+                            <?php
+                                }
+                                else
+                                {
+                                    echo 'Vous n êtes pas connecté, veuillez vous inscrire ou vous connecter si vous avez déjà un compte pour pouvoir créer un programme.';
+                                }
+                            ?>
 			</div>
 		</div>
 	</body>

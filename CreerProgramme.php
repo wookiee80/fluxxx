@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $idutilisateur = $_SESSION['idUser'];
 ?>
 <!DOCTYPE>
 <html>
@@ -20,7 +21,7 @@
                             <label for="nombre">Nombre de médias :</label>
                             <input type="number" name="nombre" id="nombre" placeholder="0-50" size="30" max="50" min="0" required />
                         </p>
-                        <input type="hidden" name="idutilisateur" id="idutilisateur" value="$idUser">
+                        <input type="hidden" name="idutilisateur" id="idutilisateur" value="<?php echo $idutilisateur; ?>">
                         <p>
                             <input type="submit" name="envoyer" id="envoyer" />
                         </p>

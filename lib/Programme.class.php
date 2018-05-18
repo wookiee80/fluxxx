@@ -86,26 +86,26 @@ public function setTitreProgramme($titreProgramme)
 
 public function setIdUser($idUser)
 {
-    if(is_int($idUser))
-    {
+//    if(is_int($idUser))
+//    {
         $this->_idUser = $idUser;
-    }
-    else 
-    {
-        throw new Exception('Alerte de violation : Erreur sur l\'ID du propriiétaire.');
-    }
+//    }
+//    else 
+//    {
+//        throw new Exception('Alerte de violation : Erreur sur l\'ID du propriétaire.');
+////    }
 }
 
 public function setNombreMedia($nombreMedia)
 {
-    if(is_int($nombreMedia))
-    {
+//    if(is_int($nombreMedia))
+//    {
         $this->_nombreMedia = $nombreMedia;
-    }
-    else
-    {
-        throw new Exception('Erreur : Le nombre de média doit être de type numérique.');
-    }
+//    }
+//    else
+//    {
+//        throw new Exception('Erreur : Le nombre de média doit être de type numérique.');
+//    }
 }
   
 }
